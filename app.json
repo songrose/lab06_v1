@@ -1,0 +1,9 @@
+{
+    "name":"lab 06 ?? v1Start on Heroku: Node.js",
+    "description": "lab 06 v1 project",
+    "repository":"https://github.com/songrose/lab06_v1",
+    "logo": "https://secure.img1-ag.wfcdn.com/im/02238154/compr-r85/8470/84707680/pokemon-pikachu-wall-decal.jpg",
+    "keywords":["node", "express", "heroku"],
+    "image":"heroku/nodejs"
+
+}

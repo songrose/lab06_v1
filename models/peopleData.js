@@ -1,19 +1,17 @@
-let db = require('../util/database');
+let db = require('../db/db');
+//db.query("DROP TABLE people");
+//db.query("CREATE TABLE people(id SERIAL PRIMARY KEY, name varchar(30) not null, about varchar(300) not null, url varchar(300) not null)");
 
-// Add a single individual to the database
-function addPeople(data) {
-    let sql = "Insert into people (name, about, imageURL) values ('" + data.name+ "','"+ data.about+ "','" + data.imageURL + "')";
-    db.execute(sql);
+function addPeople(e) {
+     db.query("Insert into people (name,about,url) VALUES ('" + e.name +"','"+ e.about + "','"+ e.url +"')");
 }
 
-// Gets all the individuals in the database
 function getAllPeople() {
-    return db.execute('Select * from people');
+    return db.query('Select * from people');
 }
 
-// Gets a specific individual from the database
 function getPeople(id) {
-    return db.execute("Select * from people where id = " + id);
+    return db.query('Select * from people where id = ' + id);
 }
 
 module.exports = {
